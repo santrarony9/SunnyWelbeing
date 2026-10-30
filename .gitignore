@@ -29,6 +29,10 @@
 *.tsbuildinfo
 next-env.d.ts
 
+# Export archives & text dumps
+*.zip
+sunny_wellbeing_centre_complete_code.txt
+
 # Operating System & IDE
 .DS_Store
 Thumbs.db
