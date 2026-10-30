@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { SERVICES, ARTICLES } from '@/data/business';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sunnywellbeingcentre.com';
+  const baseUrl = 'https://sunnywelbeing.in';
 
   const staticRoutes = [
     '',

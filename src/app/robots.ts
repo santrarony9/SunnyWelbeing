@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://sunnywellbeingcentre.com/sitemap.xml',
+    sitemap: 'https://sunnywelbeing.in/sitemap.xml',
   };
 }

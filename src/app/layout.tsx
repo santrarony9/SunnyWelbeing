@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Sunny Welbeing Center' }],
   creator: 'Sunny Welbeing Center',
-  metadataBase: new URL('https://sunnywellbeingcentre.com'),
+  metadataBase: new URL('https://sunnywelbeing.in'),
   openGraph: {
     title: 'Sunny Welbeing Center | Health Support for Body and Mind',
     description: 'Care for the Body. Support for the Mind. Guidance for Your Wellbeing in Kolkata, India.',
@@ -63,7 +63,7 @@ export default function RootLayout({
     name: BUSINESS_INFO.name,
     alternateName: BUSINESS_INFO.shortName,
     description: `${BUSINESS_INFO.tagline} ${BUSINESS_INFO.primaryMessage}`,
-    url: 'https://sunnywellbeingcentre.com',
+    url: 'https://sunnywelbeing.in',
     telephone: BUSINESS_INFO.phone,
     address: {
       '@type': 'PostalAddress',
@@ -78,7 +78,7 @@ export default function RootLayout({
       latitude: '22.5488',
       longitude: '88.3639'
     },
-    image: 'https://sunnywellbeingcentre.com/swc-logo.png',
+    image: 'https://sunnywelbeing.in/swc-logo.png',
     priceRange: '$$',
     sameAs: [
       BUSINESS_INFO.whatsappUrl
