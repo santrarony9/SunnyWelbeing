@@ -9,7 +9,6 @@ import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 
 interface Slide {
   id: number;
-  eyebrow: string;
   headline: string;
   subtitle: string;
   desc: string;
@@ -24,7 +23,6 @@ interface Slide {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    eyebrow: "SUNNY WELBEING CENTER",
     headline: "Sunny Welbeing Center",
     subtitle: "Scientific health support with a humane touch.",
     desc: "Body and mind are closely connected. Sunny Welbeing Center provides a compassionate, respectful and scientifically informed approach to physical and mental wellbeing. We listen to your concerns and help you understand possible next steps.",
@@ -37,7 +35,6 @@ const SLIDES: Slide[] = [
   },
   {
     id: 2,
-    eyebrow: "CARE FOR THE BODY & MIND",
     headline: "Care for the Body.\nSupport for the Mind.",
     subtitle: "A calm, supportive space in central Kolkata.",
     desc: "Your health questions deserve dedicated time, understanding, and thoughtful guidance. We help you unpack concerns, understand medical reports, and find appropriate professional support.",
@@ -50,7 +47,6 @@ const SLIDES: Slide[] = [
   },
   {
     id: 3,
-    eyebrow: "HEALTH QUESTIONS & CARE NAVIGATION",
     headline: "A Place to Find Clarity,\nCare and Guidance",
     subtitle: "Empowering informed healthcare decisions.",
     desc: "Busy specialists may not always have enough time to answer every question. We provide an unhurried environment to help patients and families prepare focused questions for qualified medical doctors.",
@@ -63,7 +59,6 @@ const SLIDES: Slide[] = [
   },
   {
     id: 4,
-    eyebrow: "SUPPORT FOR ALL AGES",
     headline: "Guidance for Your\nWellbeing Journey",
     subtitle: "74B Acharya Jagadish Bose Road, Kolkata.",
     desc: "From stress and sleep concerns in adults to age-related changes in elderly family members, enquire easily on WhatsApp to schedule an unhurried consultation.",
@@ -133,12 +128,6 @@ export default function HeroSlider() {
             <div className="slide-content">
               <div className="swc-container w-full relative">
                 <div key={`${slide.id}-${current}`} className="slide-inner">
-                  
-                  {/* Eyebrow Pill */}
-                  <div className="slide-tag hero-anim-tag">
-                    <span className="slide-tag-dot" />
-                    <span className="slide-tag-text">{slide.eyebrow}</span>
-                  </div>
 
                   {/* Headline: h1 on primary slide, h2 on subsequent slides for semantic hierarchy */}
                   {idx === 0 ? (
