@@ -106,7 +106,7 @@ export default function Footer() {
                   aria-label="Official YouTube Channel of Sunny Welbeing Center"
                   title="Watch Sunny Welbeing Center on YouTube"
                 >
-                  <YouTubeIcon className="w-4 h-4 flex-shrink-0 text-[#FF0000] transition-transform duration-200 group-hover:scale-105" />
+                  <YouTubeIcon className="w-4 h-4 flex-shrink-0 transition-transform duration-200 group-hover:scale-105" />
                   <span>YouTube</span>
                 </a>
               </div>
@@ -206,7 +206,7 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-contact-item">
-                  <YouTubeIcon className="footer-contact-icon text-[#FF0000]" />
+                  <YouTubeIcon className="footer-contact-icon flex-shrink-0" />
                   <a
                     href="https://www.youtube.com/@SunnyWellbeingCentre"
                     target="_blank"

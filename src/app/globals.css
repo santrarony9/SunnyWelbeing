@@ -4123,7 +4123,7 @@ p, span, li, a, button, input, textarea, select {
 .contact-info-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-  border-color: rgba(217, 119, 70, 0.35);
+  border-color: rgba(45, 79, 79, 0.22);
 }
 
 .contact-info-card:hover .contact-card-icon {
