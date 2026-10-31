@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { FacebookIcon } from '@/components/FacebookIcon';
+import { YouTubeIcon } from '@/components/YouTubeIcon';
 import CtaBanner from '@/components/CtaBanner';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/motion/ScrollReveal';
 
@@ -204,6 +205,36 @@ export default function ContactPage() {
                       >
                         <FacebookIcon variant="monochrome" className="w-4 h-4 text-[#D4A373] flex-shrink-0" />
                         <span>Visit Our Facebook Page</span>
+                        <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                      </a>
+                    </div>
+                  </div>
+                </StaggerItem>
+
+                {/* 5. Official YouTube Channel Card */}
+                <StaggerItem>
+                  <div className="contact-info-card">
+                    <div className="contact-card-icon">
+                      <YouTubeIcon className="w-5 h-5 text-[#FF0000]" />
+                    </div>
+                    <div className="contact-card-body">
+                      <span className="contact-card-channel">
+                        Official YouTube Channel
+                      </span>
+                      <h3 className="contact-card-title">
+                        Watch Our Health Videos
+                      </h3>
+                      <p className="contact-card-text">
+                        Explore expert wellness talks, doctor insights, and guidance videos from Sunny Welbeing Center on our official YouTube channel.
+                      </p>
+                      <a
+                        href="https://www.youtube.com/@SunnyWellbeingCentre"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="contact-theme-btn group"
+                      >
+                        <YouTubeIcon className="w-4 h-4 text-[#FF0000] flex-shrink-0" />
+                        <span>Visit Our YouTube Channel</span>
                         <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
                       </a>
                     </div>

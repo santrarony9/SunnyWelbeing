@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { FacebookIcon } from '@/components/FacebookIcon';
+import { YouTubeIcon } from '@/components/YouTubeIcon';
 import ScrollReveal from '@/components/motion/ScrollReveal';
 
 export default function Footer() {
@@ -96,6 +97,17 @@ export default function Footer() {
                 >
                   <FacebookIcon variant="monochrome" className="w-4 h-4 flex-shrink-0 text-[#D4A373] transition-transform duration-200 group-hover:scale-105" />
                   <span>Facebook</span>
+                </a>
+                <a
+                  href="https://www.youtube.com/@SunnyWellbeingCentre"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-btn-fb group"
+                  aria-label="Official YouTube Channel of Sunny Welbeing Center"
+                  title="Watch Sunny Welbeing Center on YouTube"
+                >
+                  <YouTubeIcon className="w-4 h-4 flex-shrink-0 text-[#FF0000] transition-transform duration-200 group-hover:scale-105" />
+                  <span>YouTube</span>
                 </a>
               </div>
             </div>
@@ -190,6 +202,19 @@ export default function Footer() {
                     aria-label="Official Facebook page of Sunny Welbeing Center"
                   >
                     Facebook: Sunny Welbeing Center
+                  </a>
+                </div>
+
+                <div className="footer-contact-item">
+                  <YouTubeIcon className="footer-contact-icon text-[#FF0000]" />
+                  <a
+                    href="https://www.youtube.com/@SunnyWellbeingCentre"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                    aria-label="Official YouTube channel of Sunny Welbeing Center"
+                  >
+                    YouTube: @SunnyWellbeingCentre
                   </a>
                 </div>
 
