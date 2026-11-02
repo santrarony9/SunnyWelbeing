@@ -65,6 +65,7 @@ export default function RootLayout({
     description: `${BUSINESS_INFO.tagline} ${BUSINESS_INFO.primaryMessage}`,
     url: 'https://sunnywelbeing.in',
     telephone: BUSINESS_INFO.phone,
+    email: BUSINESS_INFO.email,
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS_INFO.address.street,

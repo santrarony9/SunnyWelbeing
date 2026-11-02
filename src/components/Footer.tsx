@@ -226,7 +226,7 @@ export default function Footer() {
                     className="hover:underline break-all"
                     aria-label="Send email to Sunny Welbeing Center"
                   >
-                    {BUSINESS_INFO.email}
+                    Email: {BUSINESS_INFO.email}
                   </a>
                 </div>
 

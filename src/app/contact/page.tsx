@@ -220,10 +220,10 @@ export default function ContactPage() {
                     </div>
                     <div className="contact-card-body">
                       <span className="contact-card-channel">
-                        Official Email Address
+                        Official Email Channel
                       </span>
                       <h3 className="contact-card-title">
-                        Email Enquiry
+                        Official Email Address
                       </h3>
                       <p className="contact-card-text">
                         Send us a written enquiry at our official email address. We aim to respond within one working day.
