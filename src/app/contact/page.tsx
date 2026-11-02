@@ -244,7 +244,7 @@ export default function ContactPage() {
                 <StaggerItem>
                   <div className="contact-info-card">
                     <div className="contact-card-icon">
-                      <YouTubeIcon className="w-6 h-6 flex-shrink-0" />
+                      <YouTubeIcon className="w-5 h-5 text-[#D4A373] flex-shrink-0" />
                     </div>
                     <div className="contact-card-body">
                       <span className="contact-card-channel">
@@ -262,7 +262,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="contact-theme-btn group"
                       >
-                        <YouTubeIcon className="w-[18px] h-[18px] flex-shrink-0" />
+                        <YouTubeIcon className="w-4 h-4 text-[#D4A373] flex-shrink-0" />
                         <span>Visit Our YouTube Channel</span>
                         <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
                       </a>
