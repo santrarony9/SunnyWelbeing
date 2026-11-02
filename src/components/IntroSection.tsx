@@ -64,8 +64,7 @@ export default function IntroSection() {
           <div>
             <span className="section-eyebrow">✦ Our Approach</span>
             <h2 className="section-h2" id="welcome-heading">
-              A Place to Find Clarity,<br />
-              <em>Care and Guidance</em>
+              A Place to Find Clarity
             </h2>
           </div>
 

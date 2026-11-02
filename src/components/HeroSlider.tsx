@@ -47,7 +47,7 @@ const SLIDES: Slide[] = [
   },
   {
     id: 3,
-    headline: "A Place to Find Clarity,\nCare and Guidance",
+    headline: "A Place to Find Clarity",
     subtitle: "Empowering informed healthcare decisions.",
     desc: "Busy specialists may not always have enough time to answer every question. We provide an unhurried environment to help patients and families prepare focused questions for qualified medical doctors.",
     image: "/images/hero-3.jpg",
