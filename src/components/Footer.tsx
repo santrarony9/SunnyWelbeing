@@ -10,7 +10,8 @@ import {
   ArrowUpRight, 
   Navigation,
   ShieldAlert,
-  ArrowUp
+  ArrowUp,
+  Mail
 } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { FacebookIcon } from '@/components/FacebookIcon';
@@ -215,6 +216,17 @@ export default function Footer() {
                     aria-label="Official YouTube channel of Sunny Welbeing Center"
                   >
                     YouTube: @SunnyWellbeingCentre
+                  </a>
+                </div>
+
+                <div className="footer-contact-item">
+                  <Mail className="footer-contact-icon" />
+                  <a
+                    href={BUSINESS_INFO.emailUrl}
+                    className="hover:underline break-all"
+                    aria-label="Send email to Sunny Welbeing Center"
+                  >
+                    {BUSINESS_INFO.email}
                   </a>
                 </div>
 

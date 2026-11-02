@@ -49,6 +49,8 @@ export const BUSINESS_INFO = {
   whatsappNumber: "98746 13267",
   whatsappUrl: "https://wa.me/919874613267",
   whatsappCustomUrl: (message: string) => `https://wa.me/919874613267?text=${encodeURIComponent(message)}`,
+  email: "info.sunnywelbeingcenter@gmail.com",
+  emailUrl: "mailto:info.sunnywelbeingcenter@gmail.com",
   facebookUrl: "https://www.facebook.com/p/Sunny-Wellbeing-Centre-61583318943519/",
   referenceSite: "https://mind-inside.com/",
   logoPath: "/swc-logo-transparent.png",

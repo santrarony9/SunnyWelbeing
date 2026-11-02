@@ -8,7 +8,8 @@ import {
   Phone, 
   Navigation, 
   CheckCircle2, 
-  AlertCircle
+  AlertCircle,
+  Mail
 } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { FacebookIcon } from '@/components/FacebookIcon';
@@ -211,7 +212,35 @@ export default function ContactPage() {
                   </div>
                 </StaggerItem>
 
-                {/* 5. Official YouTube Channel Card */}
+                {/* 5. Official Email Card */}
+                <StaggerItem>
+                  <div className="contact-info-card">
+                    <div className="contact-card-icon">
+                      <Mail className="w-5 h-5 text-[#D4A373]" />
+                    </div>
+                    <div className="contact-card-body">
+                      <span className="contact-card-channel">
+                        Official Email Address
+                      </span>
+                      <h3 className="contact-card-title">
+                        Email Enquiry
+                      </h3>
+                      <p className="contact-card-text">
+                        Send us a written enquiry at our official email address. We aim to respond within one working day.
+                      </p>
+                      <a
+                        href={BUSINESS_INFO.emailUrl}
+                        className="contact-theme-btn group"
+                      >
+                        <Mail className="w-4 h-4 text-[#D4A373] flex-shrink-0" />
+                        <span className="break-all">{BUSINESS_INFO.email}</span>
+                        <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                      </a>
+                    </div>
+                  </div>
+                </StaggerItem>
+
+                {/* 6. Official YouTube Channel Card */}
                 <StaggerItem>
                   <div className="contact-info-card">
                     <div className="contact-card-icon">
