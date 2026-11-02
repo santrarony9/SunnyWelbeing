@@ -2,16 +2,24 @@
 
 import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Play, Clock, ExternalLink, ShieldCheck, User } from 'lucide-react';
+import { X, Play, Clock, ExternalLink, ShieldCheck, Film } from 'lucide-react';
 import type { DoctorVideo } from '@/data/doctorVideos';
 
 interface DoctorVideoModalProps {
   video: DoctorVideo | null;
   isOpen: boolean;
   onClose: () => void;
+  onSelectVideo?: (video: DoctorVideo) => void;
+  allVideos?: DoctorVideo[];
 }
 
-export default function DoctorVideoModal({ video, isOpen, onClose }: DoctorVideoModalProps) {
+export default function DoctorVideoModal({
+  video,
+  isOpen,
+  onClose,
+  onSelectVideo,
+  allVideos = []
+}: DoctorVideoModalProps) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   // Stop video playback whenever modal is closed or video changes
@@ -47,6 +55,9 @@ export default function DoctorVideoModal({ video, isOpen, onClose }: DoctorVideo
 
   if (!isOpen || !video) return null;
 
+  // Find related videos for this practitioner (e.g. Session 1 and Session 2)
+  const relatedVideos = allVideos.filter((v) => v.doctorName === video.doctorName);
+
   return (
     <AnimatePresence>
       <div
@@ -80,7 +91,7 @@ export default function DoctorVideoModal({ video, isOpen, onClose }: DoctorVideo
             <div className="flex items-center gap-2.5 min-w-0 pr-4">
               <span className="w-2.5 h-2.5 rounded-full bg-[#D97746] flex-shrink-0 animate-pulse" />
               <span className="text-[12px] font-bold uppercase tracking-[0.12em] text-[#D97746] truncate">
-                Healthcare Insight Video
+                {video.badgeText ? `${video.badgeText} Video` : "Healthcare Insight Video"}
               </span>
             </div>
 
@@ -95,21 +106,56 @@ export default function DoctorVideoModal({ video, isOpen, onClose }: DoctorVideo
 
           {/* 16:9 Video Player Viewport */}
           <div className="relative w-full bg-black aspect-video flex items-center justify-center overflow-hidden">
-            <video
-              ref={videoRef}
-              src={video.videoSrc}
-              poster={video.thumbnail}
-              controls
-              playsInline
-              preload="auto"
-              className="w-full h-full object-contain"
-            >
-              Your browser does not support HTML5 video playback.
-            </video>
+            {video.videoSrc ? (
+              <video
+                ref={videoRef}
+                src={video.videoSrc}
+                poster={video.thumbnail}
+                controls
+                playsInline
+                preload="auto"
+                className="w-full h-full object-contain"
+              >
+                Your browser does not support HTML5 video playback.
+              </video>
+            ) : video.gdriveId ? (
+              <iframe
+                src={`https://drive.google.com/file/d/${video.gdriveId}/preview`}
+                className="w-full h-full border-0"
+                allow="autoplay; fullscreen; encrypted-media"
+                allowFullScreen
+                title={video.videoTitle}
+              />
+            ) : (
+              <div className="p-6 text-center text-white/70">Video playback unavailable.</div>
+            )}
           </div>
 
           {/* Video Metadata & Doctor Credentials Footer */}
           <div className="p-5 sm:p-6 bg-[#162727] overflow-y-auto">
+            {/* If practitioner has multiple sessions, render session switcher tabs */}
+            {relatedVideos.length > 1 && (
+              <div className="flex flex-wrap items-center gap-2 mb-4 pb-3 border-b border-white/10">
+                <span className="text-[12px] text-white/60 font-semibold tracking-wide flex items-center gap-1.5 mr-1">
+                  <Film className="w-3.5 h-3.5 text-[#D97746]" />
+                  <span>Available Sessions:</span>
+                </span>
+                {relatedVideos.map((rel, idx) => (
+                  <button
+                    key={rel.id}
+                    onClick={() => onSelectVideo?.(rel)}
+                    className={`px-3 py-1 rounded-full text-[12px] font-semibold transition-all duration-200 cursor-pointer ${
+                      rel.id === video.id
+                        ? 'bg-[#D97746] text-white shadow-sm'
+                        : 'bg-white/10 text-white/80 hover:bg-white/20 hover:text-white'
+                    }`}
+                  >
+                    Part {idx + 1} ({rel.duration})
+                  </button>
+                ))}
+              </div>
+            )}
+
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
               <div className="min-w-0 flex-1">
                 <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 text-[#D97746] text-[11px] font-bold uppercase tracking-wider mb-2">

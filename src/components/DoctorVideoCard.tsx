@@ -41,7 +41,7 @@ export default function DoctorVideoCard({ video, onPlay }: DoctorVideoCardProps)
         {/* Category Pill Tag (Top Left) */}
         <div className="absolute top-3.5 left-3.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-white/95 text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 z-10">
           <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
-          <span>Doctor Insight</span>
+          <span>{video.badgeText || "Doctor Insight"}</span>
         </div>
 
         {/* Video Duration Badge (Bottom Right) */}

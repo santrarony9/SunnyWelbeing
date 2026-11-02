@@ -48,7 +48,7 @@ export default function DoctorVideoSection() {
 
           {/* Main Heading & Orange Italic Subtitle */}
           <h2 className="font-heading text-[30px] sm:text-[34px] lg:text-[44px] font-bold text-[#1A3333] leading-[1.18] tracking-[-0.02em] mb-4">
-            Meet Our Doctors<br />
+            Meet Our Doctors & Specialists<br />
             <em className="font-accent-serif italic font-normal text-[#D97746] text-[24px] sm:text-[28px] lg:text-[36px] block mt-2">
               Knowledge. Compassion. Better Wellbeing.
             </em>
@@ -56,7 +56,7 @@ export default function DoctorVideoSection() {
 
           {/* Supporting Description */}
           <p className="text-[#4A5D5D] text-[16px] lg:text-[17px] leading-[1.65] max-w-[760px] mx-auto font-normal text-pretty">
-            Get to know the healthcare professionals sharing their knowledge and experience to help you make informed decisions about your physical health, emotional wellbeing, and healthcare journey.
+            Get to know the healthcare professionals and psychological counsellors sharing their knowledge and experience to help you make informed decisions about your physical health, emotional wellbeing, and healthcare journey.
           </p>
         </ScrollReveal>
 
@@ -115,6 +115,8 @@ export default function DoctorVideoSection() {
         video={selectedVideo}
         isOpen={modalOpen}
         onClose={handleCloseModal}
+        onSelectVideo={handlePlayVideo}
+        allVideos={DOCTOR_VIDEOS}
       />
     </section>
   );

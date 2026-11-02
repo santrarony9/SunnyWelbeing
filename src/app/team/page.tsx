@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import CtaBanner from '@/components/CtaBanner';
+import DoctorVideoSection from '@/components/DoctorVideoSection';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/motion/ScrollReveal';
 
 export const metadata: Metadata = {
@@ -197,6 +198,8 @@ export default function TeamPage() {
 
         </div>
       </section>
+
+      <DoctorVideoSection />
 
       <CtaBanner />
     </div>
