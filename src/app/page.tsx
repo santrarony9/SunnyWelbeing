@@ -9,12 +9,10 @@ import ApproachValuesSection from '@/components/ApproachValuesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
-import LaunchPopup from '@/components/LaunchPopup';
 
 export default function HomePage() {
   return (
     <>
-      <LaunchPopup />
       <HeroSlider />
       <IntroSection />
       <DoctorVideoSection />
