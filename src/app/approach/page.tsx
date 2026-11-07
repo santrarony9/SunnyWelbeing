@@ -137,28 +137,30 @@ export default function ApproachPage() {
               </h3>
             </ScrollReveal>
 
-            <StaggerContainer className="approach-stages-grid">
+            <StaggerContainer className="approach-stages-grid items-stretch">
               {stages.map((stg) => {
                 return (
-                  <StaggerItem key={stg.num}>
-                    <div className="approach-stage-card">
-                      <div className="approach-stage-card-top">
-                        <div className="approach-stage-num">
-                          {stg.num}
+                  <StaggerItem key={stg.num} className="h-full flex flex-col">
+                    <div className="approach-stage-card h-full flex flex-col justify-between">
+                      <div>
+                        <div className="approach-stage-card-top">
+                          <div className="approach-stage-num">
+                            {stg.num}
+                          </div>
+                          <div className="approach-stage-info">
+                            <span className="approach-stage-tag">
+                              Stage {stg.num}
+                            </span>
+                            <h4 className="approach-stage-title">
+                              {stg.name}
+                              <span className="approach-stage-subtitle">{stg.subtitle}</span>
+                            </h4>
+                          </div>
                         </div>
-                        <div className="approach-stage-info">
-                          <span className="approach-stage-tag">
-                            Stage {stg.num}
-                          </span>
-                          <h4 className="approach-stage-title">
-                            {stg.name}
-                            <span className="approach-stage-subtitle">{stg.subtitle}</span>
-                          </h4>
-                        </div>
+                        <p className="approach-stage-desc">
+                          {stg.desc}
+                        </p>
                       </div>
-                      <p className="approach-stage-desc">
-                        {stg.desc}
-                      </p>
                     </div>
                   </StaggerItem>
                 );
@@ -170,11 +172,15 @@ export default function ApproachPage() {
       </section>
 
       {/* 4. OUR APPROACH - 9 CORE VALUES & PRINCIPLES SECTION */}
-      <section id="our-values" className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden" aria-labelledby="values-heading">
+      <section 
+        id="our-values" 
+        className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden scroll-mt-[100px] max-md:scroll-mt-[80px]" 
+        aria-labelledby="values-heading"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(217,119,70,0.15),transparent_60%)] pointer-events-none" />
         <div className="swc-container relative z-10">
           
-          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#D4A373] text-xs font-bold uppercase tracking-[0.14em] mb-4">
               <span>✦ Our Approach</span>
             </div>
@@ -187,13 +193,13 @@ export default function ApproachPage() {
           </ScrollReveal>
 
           {/* 9 Core Values Grid */}
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.06}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch" staggerDelay={0.06}>
             {CORE_VALUES.map((val, idx) => (
-              <StaggerItem key={val.id}>
-                <div className="h-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between group">
+              <StaggerItem key={val.id} className="h-full flex flex-col">
+                <div className="h-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300 shadow-xs">
                         <OrgIcon name={val.iconName} className="w-6 h-6" />
                       </div>
                       <span className="text-[11px] font-bold text-white/50 tracking-wider">
@@ -201,7 +207,7 @@ export default function ApproachPage() {
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-xl text-white mb-2.5">
+                    <h3 className="font-heading font-bold text-xl text-white mb-2.5 min-h-[3rem] flex items-center leading-snug">
                       {val.name}
                     </h3>
 
@@ -210,9 +216,12 @@ export default function ApproachPage() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-semibold text-[#D4A373]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D97746]" />
-                    <span>Ethical Standard</span>
+                  <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#D4A373]">
+                    <span className="flex items-center gap-2 font-semibold">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#D97746]" />
+                      <span>Ethical Standard</span>
+                    </span>
+                    <span className="text-white/40 text-[11px] font-mono">0{idx + 1}</span>
                   </div>
                 </div>
               </StaggerItem>

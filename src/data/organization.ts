@@ -33,6 +33,12 @@ import {
 import React from 'react';
 
 // 1. Mission Statement Data
+export interface HighlightPhrase {
+  term: string;
+  desc: string;
+  supportingLabel: string;
+}
+
 export const MISSION_STATEMENT = {
   title: "Our Mission",
   badge: "✦ Purpose & Commitment",
@@ -42,23 +48,28 @@ export const MISSION_STATEMENT = {
   highlightPhrases: [
     {
       term: "Mental Health",
-      desc: "Promoting emotional equilibrium, psychological literacy, and holistic healthcare for all ages."
+      desc: "Promoting emotional equilibrium, psychological literacy, and holistic healthcare for all ages.",
+      supportingLabel: "Holistic Emotional Care"
     },
     {
       term: "Psychosocial Well-being",
-      desc: "Nurturing the essential harmony between personal psychological health and interpersonal social environments."
+      desc: "Nurturing the essential harmony between personal psychological health and interpersonal social environments.",
+      supportingLabel: "Body-Mind Harmony"
     },
     {
       term: "Resilience",
-      desc: "Fostering adaptive coping mechanisms, emotional strength, and endurance during times of crisis and distress."
+      desc: "Fostering adaptive coping mechanisms, emotional strength, and endurance during times of crisis and distress.",
+      supportingLabel: "Adaptive Coping Strengths"
     },
     {
       term: "Social Inclusion",
-      desc: "Ensuring vulnerable, marginalized, and distressed individuals feel welcomed, supported, and valued."
+      desc: "Ensuring vulnerable, marginalized, and distressed individuals feel welcomed, supported, and valued.",
+      supportingLabel: "Equitable Support For All"
     },
     {
       term: "Dignity and Empowerment",
-      desc: "Upholding human rights, respecting lived experiences, and equipping people to navigate challenges with autonomy."
+      desc: "Upholding human rights, respecting lived experiences, and equipping people to navigate challenges with autonomy.",
+      supportingLabel: "Autonomy & Respect"
     }
   ]
 };
@@ -69,6 +80,7 @@ export interface AimItem {
   title: string;
   desc: string;
   iconName: string;
+  supportingLabel: string;
 }
 
 export const OUR_AIMS: AimItem[] = [
@@ -76,43 +88,50 @@ export const OUR_AIMS: AimItem[] = [
     id: "awareness-wellbeing",
     title: "Awareness & Emotional Well-being",
     desc: "Promote mental health awareness and emotional well-being across all age groups in our communities.",
-    iconName: "BrainCircuit"
+    iconName: "BrainCircuit",
+    supportingLabel: "Mental Health Literacy"
   },
   {
     id: "reduce-stigma",
     title: "Stigma & Misconception Reduction",
     desc: "Reduce stigma, discrimination, isolation, and harmful beliefs, taboos, and misconceptions related to mental distress and mental health treatment.",
-    iconName: "ShieldCheck"
+    iconName: "ShieldCheck",
+    supportingLabel: "De-Stigmatization & Inclusion"
   },
   {
     id: "coping-resilience",
     title: "Coping Skills & Social Networks",
     desc: "Strengthen individual coping skills, resilience, and supportive social networks to endure life transitions.",
-    iconName: "Sparkles"
+    iconName: "Sparkles",
+    supportingLabel: "Resilience & Social Support"
   },
   {
     id: "timely-support",
     title: "Respectful & Culturally Sensitive Care",
     desc: "Ensure timely, respectful, and culturally sensitive psychosocial support tailored to individual and family contexts.",
-    iconName: "Heart"
+    iconName: "Heart",
+    supportingLabel: "Culturally Informed Support"
   },
   {
     id: "community-participation",
     title: "Community Participation",
     desc: "Enable community participation in identifying psychosocial needs and actively designing sustainable solutions.",
-    iconName: "Users"
+    iconName: "Users",
+    supportingLabel: "Participatory Solutions"
   },
   {
     id: "service-access",
     title: "Access via Counselling & Referrals",
     desc: "Improve access to appropriate services through professional counselling, ethical referrals, and trusted partnerships.",
-    iconName: "Network"
+    iconName: "Network",
+    supportingLabel: "Coordinated Care Pathways"
   },
   {
     id: "rights-advocacy",
     title: "Rights-Based & Community Care",
     desc: "Advocate for rights-based, inclusive, and community-based mental health care that treats every individual with equity.",
-    iconName: "Scale"
+    iconName: "Scale",
+    supportingLabel: "Rights-Affirming Advocacy"
   }
 ];
 

@@ -126,11 +126,15 @@ export default function AboutPage() {
       </section>
 
       {/* 2. OUR MISSION SECTION */}
-      <section id="our-mission" className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden" aria-labelledby="mission-heading">
+      <section 
+        id="our-mission" 
+        className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden scroll-mt-[100px] max-md:scroll-mt-[80px]" 
+        aria-labelledby="mission-heading"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,70,0.15),transparent_60%)] pointer-events-none" />
         <div className="swc-container relative z-10">
           
-          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#D4A373] text-xs font-bold uppercase tracking-[0.14em] mb-4">
               <span>✦ Our Mission</span>
             </div>
@@ -156,14 +160,14 @@ export default function AboutPage() {
             <div className="text-center mb-8">
               <span className="text-xs uppercase tracking-widest text-[#D4A373] font-semibold">Core Pillars of Our Mission</span>
             </div>
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" staggerDelay={0.08}>
+            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch" staggerDelay={0.08}>
               {MISSION_STATEMENT.highlightPhrases.map((phrase, idx) => (
-                <StaggerItem key={idx}>
-                  <div className="h-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between">
+                <StaggerItem key={idx} className="h-full flex flex-col">
+                  <div className="h-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                     <div>
-                      <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-2.5 mb-3 min-h-[2.5rem]">
                         <CheckCircle2 className="w-5 h-5 text-[#D97746] flex-shrink-0" />
-                        <h3 className="font-heading font-bold text-lg text-white">
+                        <h3 className="font-heading font-bold text-lg text-white leading-snug">
                           {phrase.term}
                         </h3>
                       </div>
@@ -171,23 +175,38 @@ export default function AboutPage() {
                         {phrase.desc}
                       </p>
                     </div>
+
+                    <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#D4A373]">
+                      <span className="flex items-center gap-2 font-medium">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
+                        <span>{phrase.supportingLabel}</span>
+                      </span>
+                      <span className="text-white/40 text-[11px] font-mono">0{idx + 1}</span>
+                    </div>
                   </div>
                 </StaggerItem>
               ))}
               
               {/* Sixth Card with Callout */}
-              <StaggerItem>
-                <div className="h-full bg-gradient-to-br from-[#D97746]/20 to-transparent border border-[#D97746]/40 rounded-2xl p-6 flex flex-col justify-between">
+              <StaggerItem className="h-full flex flex-col">
+                <div className="h-full bg-gradient-to-br from-[#D97746]/20 to-transparent border border-[#D97746]/40 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                   <div>
-                    <span className="text-xs uppercase tracking-widest text-[#D4A373] font-bold block mb-2">Our Commitment</span>
-                    <h3 className="font-heading font-bold text-lg text-white mb-2">Compassionate Guidance</h3>
+                    <div className="flex items-center gap-2.5 mb-3 min-h-[2.5rem]">
+                      <Sparkles className="w-5 h-5 text-[#D4A373] flex-shrink-0" />
+                      <h3 className="font-heading font-bold text-lg text-white leading-snug">
+                        Compassionate Guidance
+                      </h3>
+                    </div>
                     <p className="text-sm text-white/80 leading-relaxed">
                       Ensuring every voice is heard with unconditional positive regard, cultural sensitivity, and ethical privacy.
                     </p>
                   </div>
-                  <div className="mt-4 pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-[#D4A373] font-semibold">
-                    <Sparkles className="w-4 h-4" />
-                    <span>Serving Kolkata &amp; Beyond</span>
+                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#D4A373]">
+                    <span className="flex items-center gap-2 font-semibold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
+                      <span>Serving Kolkata &amp; Beyond</span>
+                    </span>
+                    <span className="text-white/60 text-[11px] font-mono">06</span>
                   </div>
                 </div>
               </StaggerItem>
@@ -198,10 +217,14 @@ export default function AboutPage() {
       </section>
 
       {/* 3. OUR AIMS SECTION */}
-      <section id="our-aims" className="py-20 lg:py-24 bg-[#FAF8F5]" aria-labelledby="aims-heading">
+      <section 
+        id="our-aims" 
+        className="py-20 lg:py-24 bg-[#FAF8F5] scroll-mt-[100px] max-md:scroll-mt-[80px]" 
+        aria-labelledby="aims-heading"
+      >
         <div className="swc-container">
           
-          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2D4F4F]/10 border border-[#2D4F4F]/15 text-[#2D4F4F] text-xs font-bold uppercase tracking-[0.14em] mb-4">
               <span>✦ Our Aims</span>
             </div>
@@ -213,14 +236,14 @@ export default function AboutPage() {
             </p>
           </ScrollReveal>
 
-          {/* 7 Aims Grid */}
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.07}>
+          {/* 7 Aims Grid + Balanced Community Vision Card */}
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch" staggerDelay={0.07}>
             {OUR_AIMS.map((aim, idx) => (
-              <StaggerItem key={aim.id}>
-                <div className="h-full bg-white rounded-2xl border border-[rgba(45,79,79,0.12)] p-7 shadow-sm hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
+              <StaggerItem key={aim.id} className="h-full flex flex-col">
+                <div className="h-full bg-white rounded-2xl border border-[rgba(45,79,79,0.12)] p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#162727] group-hover:text-[#D4A373] transition-colors duration-300">
+                      <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#162727] group-hover:text-[#D4A373] transition-colors duration-300 shadow-xs">
                         <OrgIcon name={aim.iconName} className="w-6 h-6" />
                       </div>
                       <span className="font-heading text-xs font-bold text-[#D97746] tracking-wider uppercase">
@@ -228,7 +251,7 @@ export default function AboutPage() {
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 group-hover:text-[#2D4F4F] transition-colors">
+                    <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 min-h-[3.5rem] flex items-start group-hover:text-[#2D4F4F] transition-colors leading-snug">
                       {aim.title}
                     </h3>
 
@@ -237,31 +260,45 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-[#2D4F4F]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
-                    <span>Promoting Human Dignity</span>
+                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#2D4F4F]">
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
+                      <span>{aim.supportingLabel}</span>
+                    </span>
+                    <span className="text-[#4A5D5D]/50 text-[11px] font-mono">0{idx + 1}</span>
                   </div>
                 </div>
               </StaggerItem>
             ))}
 
-            {/* Additional Summary Card to balance the 3x3 grid */}
-            <StaggerItem>
-              <div className="h-full bg-[#162727] rounded-2xl border border-[#162727] p-7 shadow-sm text-white flex flex-col justify-between">
+            {/* Additional Summary Card spanning 2 columns on desktop to balance the 3x3 layout */}
+            <StaggerItem className="h-full flex flex-col lg:col-span-2">
+              <div className="h-full bg-[#162727] rounded-2xl border border-[#162727] p-6 sm:p-7 shadow-sm text-white flex flex-col justify-between group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#D4A373] mb-5">
-                    <Target className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#D4A373] shadow-xs">
+                      <Target className="w-6 h-6" />
+                    </div>
+                    <span className="font-heading text-xs font-bold text-[#D4A373] tracking-wider uppercase bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                      Community Vision
+                    </span>
                   </div>
-                  <span className="text-xs uppercase tracking-widest text-[#D4A373] font-bold block mb-2">Community Vision</span>
-                  <h3 className="font-heading font-bold text-xl text-white mb-3">
+
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
                     Sustainable Care Networks
                   </h3>
-                  <p className="text-sm text-white/80 leading-relaxed">
+
+                  <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
                     By partnering directly with families, schools, and medical providers, we turn these aims into tangible daily impact for communities in Kolkata.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-white/10">
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] hover:underline">
+
+                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-xs font-semibold text-[#D4A373]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
+                    <span>Collaborative Partnerships</span>
+                  </span>
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] hover:text-white transition-colors">
                     <span>Connect with our care team</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
@@ -274,10 +311,14 @@ export default function AboutPage() {
       </section>
 
       {/* 4. OUR OBJECTIVES SECTION */}
-      <section id="our-objectives" className="py-20 lg:py-24 bg-white border-y border-[rgba(45,79,79,0.08)]" aria-labelledby="objectives-heading">
+      <section 
+        id="our-objectives" 
+        className="py-20 lg:py-24 bg-white border-y border-[rgba(45,79,79,0.08)] scroll-mt-[100px] max-md:scroll-mt-[80px]" 
+        aria-labelledby="objectives-heading"
+      >
         <div className="swc-container">
           
-          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2D4F4F]/10 border border-[#2D4F4F]/15 text-[#2D4F4F] text-xs font-bold uppercase tracking-[0.14em] mb-4">
               <span>✦ Our Objectives</span>
             </div>

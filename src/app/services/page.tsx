@@ -40,10 +40,14 @@ export default function ServicesPage() {
       </section>
 
       {/* 2. WHAT WE DO SECTION */}
-      <section id="what-we-do" className="py-20 lg:py-24 bg-white border-b border-[rgba(45,79,79,0.08)]" aria-labelledby="what-we-do-heading">
+      <section 
+        id="what-we-do" 
+        className="py-20 lg:py-24 bg-white border-b border-[rgba(45,79,79,0.08)] scroll-mt-[100px] max-md:scroll-mt-[80px]" 
+        aria-labelledby="what-we-do-heading"
+      >
         <div className="swc-container">
           
-          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2D4F4F]/10 border border-[#2D4F4F]/15 text-[#2D4F4F] text-xs font-bold uppercase tracking-[0.14em] mb-4">
               <span>{WHAT_WE_DO_INFO.badge}</span>
             </div>
@@ -56,10 +60,10 @@ export default function ServicesPage() {
           </ScrollReveal>
 
           {/* 9 What We Do Cards Grid */}
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.06}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch" staggerDelay={0.06}>
             {WHAT_WE_DO_INFO.services.map((item, idx) => (
-              <StaggerItem key={item.id}>
-                <div className="h-full bg-[#FAF8F5] rounded-2xl border border-[rgba(45,79,79,0.12)] p-7 shadow-xs hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
+              <StaggerItem key={item.id} className="h-full flex flex-col">
+                <div className="h-full bg-[#FAF8F5] rounded-2xl border border-[rgba(45,79,79,0.12)] p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
                   <div>
                     <div className="flex items-center justify-between mb-5">
                       <div className="w-12 h-12 rounded-xl bg-white border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#2D4F4F] group-hover:text-[#D4A373] transition-colors duration-300 shadow-xs">
@@ -70,7 +74,7 @@ export default function ServicesPage() {
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 group-hover:text-[#2D4F4F] transition-colors">
+                    <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 min-h-[3.5rem] flex items-start group-hover:text-[#2D4F4F] transition-colors leading-snug">
                       {item.title}
                     </h3>
 
@@ -102,11 +106,15 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. SPECIAL PROGRAMMES AND ACTIVITIES SECTION */}
-      <section id="special-programmes" className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden" aria-labelledby="programmes-heading">
+      <section 
+        id="special-programmes" 
+        className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden scroll-mt-[100px] max-md:scroll-mt-[80px]" 
+        aria-labelledby="programmes-heading"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(217,119,70,0.12),transparent_70%)] pointer-events-none" />
         <div className="swc-container relative z-10">
           
-          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-14">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#D4A373] text-xs font-bold uppercase tracking-[0.14em] mb-4">
               <span>✦ Dedicated Initiatives</span>
             </div>
@@ -119,21 +127,21 @@ export default function ServicesPage() {
           </ScrollReveal>
 
           {/* 4 Feature Programmes Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             {SPECIAL_PROGRAMMES.map((prog, idx) => (
-              <ScrollReveal key={prog.id} variant="fade-up" delay={idx * 0.1}>
+              <ScrollReveal key={prog.id} variant="fade-up" delay={idx * 0.1} className="h-full flex flex-col">
                 <div className="h-full bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-[#D97746]/50 rounded-3xl p-8 sm:p-10 transition-all duration-300 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-6">
                       <div className="w-14 h-14 rounded-2xl bg-[#D97746]/20 border border-[#D97746]/30 flex items-center justify-center text-[#D4A373]">
                         <OrgIcon name={prog.iconName} className="w-7 h-7" />
                       </div>
-                      <span className="text-xs font-bold tracking-widest uppercase text-[#D4A373] bg-white/10 px-3.5 py-1.5 rounded-full">
+                      <span className="text-xs font-bold tracking-widest uppercase text-[#D4A373] bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
                         {prog.category}
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-2xl text-white mb-4">
+                    <h3 className="font-heading font-bold text-2xl text-white mb-4 min-h-[2rem] flex items-center leading-snug">
                       {prog.title}
                     </h3>
 
