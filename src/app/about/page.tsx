@@ -194,12 +194,12 @@ export default function AboutPage() {
                 </StaggerItem>
               ))}
               
-              {/* Sixth Card with Callout */}
+              {/* Sixth Card */}
               <StaggerItem className="h-full flex flex-col">
-                <div className="h-full bg-gradient-to-br from-[#D97746]/20 to-transparent border border-[#D97746]/40 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
+                <div className="h-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-12 h-12 rounded-xl bg-[#D97746]/20 border border-[#D97746]/30 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300 shadow-xs">
+                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300 shadow-xs">
                         <Sparkles className="w-6 h-6 flex-shrink-0" />
                       </div>
                       <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
@@ -211,16 +211,16 @@ export default function AboutPage() {
                       Compassionate Guidance
                     </h3>
 
-                    <p className="text-sm text-white/80 leading-relaxed">
+                    <p className="text-sm text-white/75 leading-relaxed">
                       Ensuring every voice is heard with unconditional positive regard, cultural sensitivity, and ethical privacy.
                     </p>
                   </div>
                   <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#D4A373]">
-                    <span className="flex items-center gap-2 font-semibold">
+                    <span className="flex items-center gap-2 font-medium">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
                       <span>Serving Kolkata &amp; Beyond</span>
                     </span>
-                    <span className="text-white/60 text-[11px] font-mono">06</span>
+                    <span className="text-white/40 text-[11px] font-mono">06</span>
                   </div>
                 </div>
               </StaggerItem>
