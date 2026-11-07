@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, ShieldCheck, HeartHandshake, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '@/data/business';
 import ScrollReveal from '@/components/motion/ScrollReveal';
@@ -23,7 +24,7 @@ export default function ApproachValuesSection() {
             Scientific health support with a humane touch. We offer a compassionate, respectful, and scientifically informed approach to physical and mental wellbeing, helping people organise their concerns and understand their next steps.
           </p>
 
-          {/* Qualitative Pillars (No unverified years claims) */}
+          {/* Qualitative Pillars */}
           <div className="mi-stats">
             <div className="mi-stat">
               <span className="mi-stat-num">Patient</span>
@@ -37,7 +38,7 @@ export default function ApproachValuesSection() {
             <hr className="mi-stat-divider" />
             <div className="mi-stat">
               <Counter to={100} suffix="%" className="mi-stat-num" />
-              <span className="mi-stat-label">Confidential & Ethical</span>
+              <span className="mi-stat-label">Confidential &amp; Ethical</span>
             </div>
           </div>
         </ScrollReveal>
@@ -57,8 +58,8 @@ export default function ApproachValuesSection() {
               Sunny Welbeing Center provides a calm, supportive space to discuss concerns about physical and mental wellbeing. Our approach focuses on <strong>listening carefully</strong>, offering compassionate guidance and helping people prepare informed questions for <strong>qualified healthcare professionals</strong>.
             </p>
 
-            {/* CTA Button */}
-            <div className="mi-cta-group">
+            {/* CTA Buttons */}
+            <div className="mi-cta-group flex flex-wrap items-center gap-3">
               <a
                 href={BUSINESS_INFO.whatsappUrl}
                 target="_blank"
@@ -68,13 +69,21 @@ export default function ApproachValuesSection() {
                 <span>Book an Appointment</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
+
+              <Link
+                href="/approach"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/20 text-white/90 hover:text-white hover:border-[#D4A373] text-sm font-semibold transition-all"
+              >
+                <span>Our 9 Core Values</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
 
             {/* Trust Badges */}
             <div className="mi-badges">
               <span className="mi-badge">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#D4A373]" />
-                Confidential & Safe
+                Confidential &amp; Safe
               </span>
               <span className="mi-badge">
                 <HeartHandshake className="w-3.5 h-3.5 text-[#D4A373]" />

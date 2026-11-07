@@ -8,15 +8,19 @@ import { BUSINESS_INFO } from '@/data/business';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sunny Welbeing Center | Health Support for Body and Mind | Kolkata',
+    default: 'Sunny Welbeing Center | Mental Health & Psychosocial Support | Kolkata',
     template: '%s | Sunny Welbeing Center (SWC) Kolkata'
   },
-  description: 'Sunny Welbeing Center (SWC) in Kolkata provides body and mind health support, psychological counselling, and care navigation at 74B Acharya Jagadish Bose Road. Enquire on WhatsApp: +91 98746 13267.',
+  description: 'Sunny Welbeing Center (SWC) in Kolkata provides mental health support, psychological counselling, psychosocial well-being, life skills training, and care navigation at 74B Acharya Jagadish Bose Road. Enquire on WhatsApp: +91 98746 13267.',
   keywords: [
     'Sunny Welbeing Center',
     'SWC Kolkata',
-    'Body and mind health support Kolkata',
+    'Mental health support Kolkata',
+    'Psychosocial well-being Kolkata',
     'Psychological counselling Kolkata',
+    'Community mental health Kolkata',
+    'Life skills education Kolkata',
+    'Art-based psychosocial activities Kolkata',
     'Health guidance Kolkata',
     'Counselling centre Acharya Jagadish Bose Road',
     'Child and adolescent wellbeing Kolkata',
@@ -28,8 +32,8 @@ export const metadata: Metadata = {
   creator: 'Sunny Welbeing Center',
   metadataBase: new URL('https://sunnywelbeing.in'),
   openGraph: {
-    title: 'Sunny Welbeing Center | Health Support for Body and Mind',
-    description: 'Care for the Body. Support for the Mind. Guidance for Your Wellbeing in Kolkata, India.',
+    title: 'Sunny Welbeing Center | Mental Health & Psychosocial Support',
+    description: 'Promoting mental health, psychosocial well-being, resilience, and social inclusion in Kolkata, India.',
     siteName: 'Sunny Welbeing Center',
     locale: 'en_IN',
     type: 'website',
@@ -82,7 +86,9 @@ export default function RootLayout({
     image: 'https://sunnywelbeing.in/swc-logo.png',
     priceRange: '$$',
     sameAs: [
-      BUSINESS_INFO.whatsappUrl
+      BUSINESS_INFO.whatsappUrl,
+      BUSINESS_INFO.facebookUrl,
+      'https://www.youtube.com/@SunnyWellbeingCentre'
     ]
   };
 

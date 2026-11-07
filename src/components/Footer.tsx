@@ -57,13 +57,13 @@ export default function Footer() {
                     Sunny Welbeing Center
                   </span>
                   <span className="footer-tagline">
-                    Body & Mind Health Support &bull; Kolkata
+                    Body &amp; Mind Health Support &bull; Kolkata
                   </span>
                 </div>
               </Link>
 
               <p className="footer-centre-desc">
-                Care for the Body. Support for the Mind. Guidance for Your Wellbeing. Helping individuals and families in Kolkata navigate health concerns, emotional strain, and appropriate professional care.
+                Promoting mental health, psychosocial well-being, resilience, and social inclusion. Helping individuals, families, and communities in Kolkata cope with distress and access compassionate care with dignity.
               </p>
 
               <div className="footer-actions">
@@ -123,16 +123,19 @@ export default function Footer() {
                   <Link href="/">Home</Link>
                 </li>
                 <li className="footer-link-item">
-                  <Link href="/about">About Us</Link>
+                  <Link href="/about">About Us &amp; Mission</Link>
                 </li>
                 <li className="footer-link-item">
-                  <Link href="/approach">Our Approach</Link>
+                  <Link href="/services">What We Do &amp; Programmes</Link>
                 </li>
                 <li className="footer-link-item">
-                  <Link href="/services">Services Overview</Link>
+                  <Link href="/approach">Our Approach &amp; Values</Link>
                 </li>
                 <li className="footer-link-item">
-                  <Link href="/team">Team & Advisory</Link>
+                  <Link href="/#who-we-serve">Who We Serve</Link>
+                </li>
+                <li className="footer-link-item">
+                  <Link href="/team">Team &amp; Advisory</Link>
                 </li>
                 <li className="footer-link-item">
                   <Link href="/faq">FAQ</Link>
@@ -149,14 +152,36 @@ export default function Footer() {
                 Support Areas
               </h4>
               <ul className="footer-links-list">
-                {SERVICES.map((s) => (
-                  <li key={s.slug} className="footer-link-item">
-                    <Link href={`/services/${s.slug}`} className="group">
-                      <span>{s.title}</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A373] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                    </Link>
-                  </li>
-                ))}
+                <li className="footer-link-item">
+                  <Link href="/services#what-we-do" className="group">
+                    <span>Psychosocial Counselling</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A373] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                  </Link>
+                </li>
+                <li className="footer-link-item">
+                  <Link href="/services#special-programmes" className="group">
+                    <span>Life Skills Training (WHO)</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A373] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                  </Link>
+                </li>
+                <li className="footer-link-item">
+                  <Link href="/services#special-programmes" className="group">
+                    <span>Art-Based Activities</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A373] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                  </Link>
+                </li>
+                <li className="footer-link-item">
+                  <Link href="/services/support-older-adults-families" className="group">
+                    <span>Older Adults &amp; Families</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A373] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                  </Link>
+                </li>
+                <li className="footer-link-item">
+                  <Link href="/services/health-guidance-test-results" className="group">
+                    <span>Health Guidance &amp; Reports</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#D4A373] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -260,7 +285,7 @@ export default function Footer() {
               &copy; {currentYear} Sunny Welbeing Center (SWC). All rights reserved. Kolkata, India.
             </p>
             <div className="footer-bottom-right">
-              <span>Body & Mind Health Support</span>
+              <span>Psychosocial &amp; Mental Health Support</span>
               <span>&bull;</span>
               <span>74B Acharya Jagadish Bose Road</span>
             </div>

@@ -93,21 +93,21 @@ export default function Header() {
               href="/services"
               className={`nav-link ${isActive('/services') ? 'active' : ''}`}
             >
-              Our Services
+              What We Do
             </Link>
 
             <Link
-              href="/#who-we-support"
-              className={`nav-link ${pathname === '/#who-we-support' ? 'active' : ''}`}
+              href="/approach"
+              className={`nav-link ${isActive('/approach') ? 'active' : ''}`}
             >
-              Who We Support
+              Our Approach
             </Link>
 
             <Link
-              href="/#why-choose"
-              className={`nav-link ${pathname === '/#why-choose' ? 'active' : ''}`}
+              href="/#who-we-serve"
+              className={`nav-link ${pathname === '/#who-we-serve' || pathname === '/#who-we-support' ? 'active' : ''}`}
             >
-              Why Choose SWC
+              Who We Serve
             </Link>
 
             <Link
@@ -202,15 +202,7 @@ export default function Header() {
                       isActive('/about') ? 'text-[#D97746] font-semibold' : 'text-[#1A3333] hover:text-[#D97746]'
                     }`}
                   >
-                    About Us
-                  </Link>
-                  <Link
-                    href="/approach"
-                    className={`text-base font-heading font-medium transition-colors ${
-                      isActive('/approach') ? 'text-[#D97746] font-semibold' : 'text-[#1A3333] hover:text-[#D97746]'
-                    }`}
-                  >
-                    Our Approach
+                    About Us (Mission &amp; Aims)
                   </Link>
                   <Link
                     href="/services"
@@ -218,13 +210,21 @@ export default function Header() {
                       isActive('/services') ? 'text-[#D97746] font-semibold' : 'text-[#1A3333] hover:text-[#D97746]'
                     }`}
                   >
-                    All Services
+                    What We Do &amp; Programmes
                   </Link>
                   <Link
-                    href="/#who-we-support"
+                    href="/approach"
+                    className={`text-base font-heading font-medium transition-colors ${
+                      isActive('/approach') ? 'text-[#D97746] font-semibold' : 'text-[#1A3333] hover:text-[#D97746]'
+                    }`}
+                  >
+                    Our Approach &amp; Values
+                  </Link>
+                  <Link
+                    href="/#who-we-serve"
                     className="text-base font-heading font-medium text-[#1A3333] hover:text-[#D97746] transition-colors"
                   >
-                    Who We Support
+                    Who We Serve
                   </Link>
                   <Link
                     href="/#why-choose"
@@ -238,7 +238,7 @@ export default function Header() {
                       isActive('/team') ? 'text-[#D97746] font-semibold' : 'text-[#1A3333] hover:text-[#D97746]'
                     }`}
                   >
-                    Team & Advisory
+                    Team &amp; Advisory
                   </Link>
                   <Link
                     href="/faq"

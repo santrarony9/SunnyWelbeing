@@ -29,7 +29,7 @@ export default function IntroSection() {
       desc: "A safe, non-judgemental space for children, adults, older adults, and family caregivers facing challenging health transitions.",
       image: "/images/intro-family-support.jpg",
       link: "/services",
-      btnText: "Explore Care Options",
+      btnText: "Explore What We Do",
       features: [
         "Work stress & emotional navigation",
         "Sleep difficulties & screen use habits",
@@ -62,7 +62,7 @@ export default function IntroSection() {
         {/* 2-Column Header with requested About content */}
         <ScrollReveal variant="fade-up" className="services-header">
           <div>
-            <span className="section-eyebrow">✦ Our Approach</span>
+            <span className="section-eyebrow">✦ Our Mission &amp; Approach</span>
             <h2 className="section-h2" id="welcome-heading">
               A Place to Find Clarity
             </h2>
@@ -77,6 +77,12 @@ export default function IntroSection() {
               <p>
                 Sunny Welbeing Center provides a calm, supportive space to discuss concerns about physical and mental wellbeing. Our approach focuses on listening carefully, offering compassionate guidance and helping people prepare informed questions for qualified healthcare professionals.
               </p>
+              <div className="pt-2">
+                <Link href="/about#our-mission" className="inline-flex items-center gap-2 text-sm font-bold text-[#D97746] hover:underline">
+                  <span>Read Our Mission, Aims &amp; Objectives</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
           </div>
         </ScrollReveal>

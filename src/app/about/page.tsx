@@ -4,22 +4,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BUSINESS_INFO } from '@/data/business';
 import { 
+  MISSION_STATEMENT, 
+  OUR_AIMS, 
+  OUR_OBJECTIVES 
+} from '@/data/organization';
+import { 
   HeartHandshake, 
   ShieldCheck, 
   Compass, 
   ArrowRight,
   Ear,
   MapPin,
-  HelpCircle,
-  CheckCircle2
+  CheckCircle2,
+  Sparkles,
+  Users,
+  Target,
+  Scale
 } from 'lucide-react';
+import { OrgIcon } from '@/components/OrgIcon';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import CtaBanner from '@/components/CtaBanner';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/motion/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'About Us | Scientific Health Support with a Humane Touch',
-  description: 'Sunny Welbeing Center (SWC) in Kolkata provides compassionate psychological counselling and physical health guidance, recognising that the body and mind are closely connected.',
+  title: 'About Us | Our Mission, Aims & Objectives | Sunny Welbeing Center',
+  description: 'Learn about the mission, aims, and objectives of Sunny Welbeing Center in Kolkata. We promote mental health, psychosocial well-being, resilience, and social inclusion with dignity.',
 };
 
 export default function AboutPage() {
@@ -44,7 +53,7 @@ export default function AboutPage() {
   return (
     <div className="bg-[#FAF8F5]">
       
-      {/* Mind Inside Split Hero: Dark Left Column + Right Image Column */}
+      {/* 1. Mind Inside Split Hero: Dark Left Column + Right Image Column */}
       <section className="about-hero-section">
         <div className="about-hero-grid">
           
@@ -52,7 +61,7 @@ export default function AboutPage() {
           <div className="about-hero-col-text">
             <div className="about-hero-badge">
               <span className="about-hero-badge-dot" />
-              <span>Health Support Centre &bull; Kolkata</span>
+              <span>Health &amp; Psychosocial Support &bull; Kolkata</span>
             </div>
 
             <h1 className="about-hero-title">
@@ -61,7 +70,7 @@ export default function AboutPage() {
             </h1>
 
             <p className="about-hero-desc">
-              Scientific health support with a humane touch. We offer a compassionate, respectful, and scientifically informed space in central Kolkata, helping people organise their concerns and understand their next steps.
+              Scientific health support with a humane touch. We offer a compassionate, respectful, and scientifically informed space in central Kolkata, helping individuals, families, and communities organise their concerns, build resilience, and navigate their next steps with dignity.
             </p>
 
             <div className="about-hero-actions">
@@ -72,16 +81,16 @@ export default function AboutPage() {
                 className="about-btn-primary"
               >
                 <WhatsAppIcon className="w-4 h-4 text-white" />
-                <span>Book an Appointment</span>
+                <span>Enquire via WhatsApp</span>
               </a>
 
               <Link href="/services" className="about-btn-ghost">
-                <span>Explore Services</span>
+                <span>Explore What We Do</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
-            {/* Verified Qualitative Commitments (No unverified years claims) */}
+            {/* Verified Qualitative Commitments */}
             <div className="about-trust-indicators">
               <div className="about-trust-item">
                 <span className="about-trust-val">Attentive</span>
@@ -116,7 +125,212 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Core Philosophy Section with Requested Text */}
+      {/* 2. OUR MISSION SECTION */}
+      <section id="our-mission" className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden" aria-labelledby="mission-heading">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(217,119,70,0.15),transparent_60%)] pointer-events-none" />
+        <div className="swc-container relative z-10">
+          
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#D4A373] text-xs font-bold uppercase tracking-[0.14em] mb-4">
+              <span>✦ Our Mission</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight leading-tight" id="mission-heading">
+              Creating Supportive Communities with <em className="font-accent-serif italic font-normal text-[#D4A373]">Dignity &amp; Purpose</em>
+            </h2>
+          </ScrollReveal>
+
+          {/* Main Mission Text Block */}
+          <ScrollReveal variant="fade-up" className="max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 backdrop-blur-sm shadow-xl mb-14">
+            <div className="space-y-6 text-lg sm:text-xl text-[#F9F8F6]/90 leading-relaxed font-normal">
+              <p className="border-l-4 border-[#D97746] pl-6 text-xl sm:text-2xl text-white font-medium italic">
+                &ldquo;{MISSION_STATEMENT.paragraph1}&rdquo;
+              </p>
+              <p className="pl-6 text-[#F9F8F6]/85">
+                {MISSION_STATEMENT.paragraph2}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* Highlighted Phrases Cards Grid */}
+          <div>
+            <div className="text-center mb-8">
+              <span className="text-xs uppercase tracking-widest text-[#D4A373] font-semibold">Core Pillars of Our Mission</span>
+            </div>
+            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" staggerDelay={0.08}>
+              {MISSION_STATEMENT.highlightPhrases.map((phrase, idx) => (
+                <StaggerItem key={idx}>
+                  <div className="h-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-2 mb-3">
+                        <CheckCircle2 className="w-5 h-5 text-[#D97746] flex-shrink-0" />
+                        <h3 className="font-heading font-bold text-lg text-white">
+                          {phrase.term}
+                        </h3>
+                      </div>
+                      <p className="text-sm text-white/75 leading-relaxed">
+                        {phrase.desc}
+                      </p>
+                    </div>
+                  </div>
+                </StaggerItem>
+              ))}
+              
+              {/* Sixth Card with Callout */}
+              <StaggerItem>
+                <div className="h-full bg-gradient-to-br from-[#D97746]/20 to-transparent border border-[#D97746]/40 rounded-2xl p-6 flex flex-col justify-between">
+                  <div>
+                    <span className="text-xs uppercase tracking-widest text-[#D4A373] font-bold block mb-2">Our Commitment</span>
+                    <h3 className="font-heading font-bold text-lg text-white mb-2">Compassionate Guidance</h3>
+                    <p className="text-sm text-white/80 leading-relaxed">
+                      Ensuring every voice is heard with unconditional positive regard, cultural sensitivity, and ethical privacy.
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-[#D4A373] font-semibold">
+                    <Sparkles className="w-4 h-4" />
+                    <span>Serving Kolkata &amp; Beyond</span>
+                  </div>
+                </div>
+              </StaggerItem>
+            </StaggerContainer>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. OUR AIMS SECTION */}
+      <section id="our-aims" className="py-20 lg:py-24 bg-[#FAF8F5]" aria-labelledby="aims-heading">
+        <div className="swc-container">
+          
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2D4F4F]/10 border border-[#2D4F4F]/15 text-[#2D4F4F] text-xs font-bold uppercase tracking-[0.14em] mb-4">
+              <span>✦ Our Aims</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-[#1A3333] tracking-tight leading-tight" id="aims-heading">
+              Our Strategic Aims for <em className="font-accent-serif italic font-normal text-[#D97746]">Community Well-being</em>
+            </h2>
+            <p className="mt-4 text-[#4A5D5D] text-lg max-w-2xl mx-auto leading-relaxed">
+              Clear, practical goals designed to dismantle barriers, foster individual coping skills, and ensure respectful psychosocial care.
+            </p>
+          </ScrollReveal>
+
+          {/* 7 Aims Grid */}
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.07}>
+            {OUR_AIMS.map((aim, idx) => (
+              <StaggerItem key={aim.id}>
+                <div className="h-full bg-white rounded-2xl border border-[rgba(45,79,79,0.12)] p-7 shadow-sm hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#162727] group-hover:text-[#D4A373] transition-colors duration-300">
+                        <OrgIcon name={aim.iconName} className="w-6 h-6" />
+                      </div>
+                      <span className="font-heading text-xs font-bold text-[#D97746] tracking-wider uppercase">
+                        Aim 0{idx + 1}
+                      </span>
+                    </div>
+
+                    <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 group-hover:text-[#2D4F4F] transition-colors">
+                      {aim.title}
+                    </h3>
+
+                    <p className="text-[#4A5D5D] text-sm leading-relaxed">
+                      {aim.desc}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-[#2D4F4F]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
+                    <span>Promoting Human Dignity</span>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+
+            {/* Additional Summary Card to balance the 3x3 grid */}
+            <StaggerItem>
+              <div className="h-full bg-[#162727] rounded-2xl border border-[#162727] p-7 shadow-sm text-white flex flex-col justify-between">
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#D4A373] mb-5">
+                    <Target className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs uppercase tracking-widest text-[#D4A373] font-bold block mb-2">Community Vision</span>
+                  <h3 className="font-heading font-bold text-xl text-white mb-3">
+                    Sustainable Care Networks
+                  </h3>
+                  <p className="text-sm text-white/80 leading-relaxed">
+                    By partnering directly with families, schools, and medical providers, we turn these aims into tangible daily impact for communities in Kolkata.
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-white/10">
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] hover:underline">
+                    <span>Connect with our care team</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            </StaggerItem>
+          </StaggerContainer>
+
+        </div>
+      </section>
+
+      {/* 4. OUR OBJECTIVES SECTION */}
+      <section id="our-objectives" className="py-20 lg:py-24 bg-white border-y border-[rgba(45,79,79,0.08)]" aria-labelledby="objectives-heading">
+        <div className="swc-container">
+          
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#2D4F4F]/10 border border-[#2D4F4F]/15 text-[#2D4F4F] text-xs font-bold uppercase tracking-[0.14em] mb-4">
+              <span>✦ Our Objectives</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-[#1A3333] tracking-tight leading-tight" id="objectives-heading">
+              Our Core <em className="font-accent-serif italic font-normal text-[#D97746]">Action Framework</em>
+            </h2>
+            <p className="mt-4 text-[#4A5D5D] text-lg max-w-2xl mx-auto leading-relaxed">
+              Organized into four major pillars addressing individual well-being, family networks, proactive community education, and institutional advocacy.
+            </p>
+          </ScrollReveal>
+
+          {/* 4 Subsections Grid */}
+          <div className="space-y-8">
+            {OUR_OBJECTIVES.map((obj, idx) => (
+              <ScrollReveal key={obj.id} variant="fade-up" delay={idx * 0.08}>
+                <div className="bg-[#FAF8F5] rounded-3xl border border-[rgba(45,79,79,0.12)] p-8 sm:p-10 shadow-sm hover:border-[#D97746]/40 transition-all duration-300">
+                  <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
+                    
+                    {/* Header Col */}
+                    <div className="lg:w-1/3 flex-shrink-0">
+                      <div className="w-12 h-12 rounded-xl bg-[#2D4F4F] text-[#D4A373] flex items-center justify-center mb-4 shadow-sm">
+                        <OrgIcon name={obj.iconName} className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-2xl font-heading font-bold text-[#1A3333] mb-2">
+                        {obj.title}
+                      </h3>
+                      <p className="text-sm font-semibold text-[#D97746] tracking-wide">
+                        {obj.subtitle}
+                      </p>
+                    </div>
+
+                    {/* Points Col */}
+                    <div className="lg:w-2/3 space-y-4">
+                      {obj.points.map((pt, pIdx) => (
+                        <div key={pIdx} className="flex items-start gap-3.5 bg-white rounded-xl p-4 sm:p-5 border border-[rgba(45,79,79,0.06)] shadow-xs">
+                          <span className="w-2 h-2 rounded-full bg-[#D97746] mt-2 flex-shrink-0" />
+                          <p className="text-[#3A4E4E] text-sm sm:text-base leading-relaxed">
+                            {pt}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. Core Philosophy Section (Existing Pillars Preserved) */}
       <section className="about-philosophy-section">
         <div className="swc-container">
           

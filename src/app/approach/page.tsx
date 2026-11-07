@@ -3,21 +3,26 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BUSINESS_INFO } from '@/data/business';
+import { CORE_VALUES } from '@/data/organization';
 import { 
   Ear, 
   HelpCircle, 
   Compass, 
   HeartHandshake, 
   ShieldAlert, 
-  ArrowRight
+  ArrowRight,
+  ShieldCheck,
+  CheckCircle2,
+  Sparkles
 } from 'lucide-react';
+import { OrgIcon } from '@/components/OrgIcon';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import CtaBanner from '@/components/CtaBanner';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/motion/ScrollReveal';
 
 export const metadata: Metadata = {
-  title: 'Our Approach | Listen, Clarify, Guide, Support',
-  description: 'Learn about the 4-stage health guidance and counselling approach at Sunny Welbeing Center Kolkata: Listen, Clarify, Guide, and Support.',
+  title: 'Our Approach & Core Values | Sunny Welbeing Center Kolkata',
+  description: 'Explore the 4-stage framework and 9 core principles that define Our Approach at Sunny Welbeing Center Kolkata: Dignity, Confidentiality, Inclusivity, and Rights-Based Care.',
 };
 
 export default function ApproachPage() {
@@ -51,20 +56,21 @@ export default function ApproachPage() {
 
   return (
     <div className="bg-[#FAF8F5]">
+      
       {/* 1. Header Banner */}
       <div className="approach-hero-banner">
         <div className="approach-hero-overlay" />
         <div className="approach-hero-container">
           <div className="approach-hero-badge">
             <span className="approach-hero-badge-dot" />
-            <span>Our Guiding Process</span>
+            <span>Our Approach &amp; Core Values</span>
           </div>
           <h1 className="approach-hero-title">
-            A Four-Stage Framework for
-            <span className="approach-hero-subtitle">Clarity and Support</span>
+            Compassionate Guidance Grounded in
+            <span className="approach-hero-subtitle">Ethics, Dignity, &amp; Clarity</span>
           </h1>
           <p className="approach-hero-desc">
-            How Sunny Welbeing Center helps individuals and families navigate physical-health questions, emotional strain, and appropriate healthcare pathways in Kolkata.
+            How Sunny Welbeing Center helps individuals, families, and communities navigate emotional distress, physical-health questions, and appropriate healthcare pathways in Kolkata.
           </p>
         </div>
       </div>
@@ -82,7 +88,7 @@ export default function ApproachPage() {
               </h2>
               <div className="approach-paragraphs">
                 <p>
-                  When facing physical discomfort, behavioural difficulties in a child, or subtle changes in an aging relative, it is common to feel confused by medical terminology or uncertain about which specialist to visit first.
+                  When facing emotional distress, physical discomfort, behavioural difficulties in a child, or subtle changes in an aging relative, it is common to feel confused by medical terminology or uncertain about which specialist to visit first.
                 </p>
                 <p>
                   At Sunny Welbeing Center, we do not operate as a clinical hospital or offer rushed diagnostic pronouncements. Instead, we serve as an objective, compassionate sanctuary where you can pause, clarify your thoughts, and determine the most sensible next steps for care.
@@ -103,7 +109,7 @@ export default function ApproachPage() {
                   <span>Enquire on WhatsApp</span>
                 </a>
                 <Link href="/services" className="approach-btn-services">
-                  <span>Explore Our Services</span>
+                  <span>Explore What We Do</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -160,7 +166,65 @@ export default function ApproachPage() {
             </StaggerContainer>
           </div>
 
-          {/* 4. Mandatory Clear Health Guidance Disclaimer */}
+        </div>
+      </section>
+
+      {/* 4. OUR APPROACH - 9 CORE VALUES & PRINCIPLES SECTION */}
+      <section id="our-values" className="py-20 lg:py-24 bg-[#162727] text-white relative overflow-hidden" aria-labelledby="values-heading">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(217,119,70,0.15),transparent_60%)] pointer-events-none" />
+        <div className="swc-container relative z-10">
+          
+          <ScrollReveal variant="fade-up" className="max-w-3xl mx-auto text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#D4A373] text-xs font-bold uppercase tracking-[0.14em] mb-4">
+              <span>✦ Our Approach</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white tracking-tight leading-tight" id="values-heading">
+              Our Core Values &amp; <em className="font-accent-serif italic font-normal text-[#D4A373]">Ethical Principles</em>
+            </h2>
+            <p className="mt-4 text-[#F9F8F6]/80 text-lg max-w-2xl mx-auto leading-relaxed">
+              These nine foundational principles guide every interaction, community initiative, counselling session, and advocacy effort at Sunny Welbeing Center.
+            </p>
+          </ScrollReveal>
+
+          {/* 9 Core Values Grid */}
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.06}>
+            {CORE_VALUES.map((val, idx) => (
+              <StaggerItem key={val.id}>
+                <div className="h-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between group">
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300">
+                        <OrgIcon name={val.iconName} className="w-6 h-6" />
+                      </div>
+                      <span className="text-[11px] font-bold text-white/50 tracking-wider">
+                        0{idx + 1}
+                      </span>
+                    </div>
+
+                    <h3 className="font-heading font-bold text-xl text-white mb-2.5">
+                      {val.name}
+                    </h3>
+
+                    <p className="text-white/75 text-sm leading-relaxed">
+                      {val.shortDesc}
+                    </p>
+                  </div>
+
+                  <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-semibold text-[#D4A373]">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D97746]" />
+                    <span>Ethical Standard</span>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+        </div>
+      </section>
+
+      {/* 5. Mandatory Clear Health Guidance Disclaimer */}
+      <section className="py-16 bg-[#FAF8F5]">
+        <div className="swc-container">
           <ScrollReveal variant="fade-up" className="approach-disclaimer-box">
             <div className="max-w-3xl">
               <div className="approach-disclaimer-badge">
@@ -202,7 +266,6 @@ export default function ApproachPage() {
               </div>
             </div>
           </ScrollReveal>
-
         </div>
       </section>
 

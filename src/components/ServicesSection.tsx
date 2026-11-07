@@ -87,7 +87,7 @@ export default function ServicesSection() {
             href="/services" 
             className="services-cta-btn group"
           >
-            <span>View All Health Support Categories</span>
+            <span>Explore What We Do &amp; Special Programmes</span>
             <ArrowRight className="services-cta-icon" />
           </Link>
         </div>
