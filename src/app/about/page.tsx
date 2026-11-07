@@ -287,32 +287,32 @@ export default function AboutPage() {
 
             {/* Additional Summary Card spanning 2 columns on desktop to balance the 3x3 layout */}
             <StaggerItem className="h-full flex flex-col lg:col-span-2">
-              <div className="h-full bg-[#162727] rounded-2xl border border-[#162727] p-6 sm:p-7 shadow-sm text-white flex flex-col justify-between group">
+              <div className="h-full bg-white rounded-2xl border border-[rgba(45,79,79,0.12)] p-6 sm:p-7 shadow-sm hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#D4A373] shadow-xs">
+                    <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#D97746] group-hover:bg-[#162727] group-hover:text-[#D4A373] transition-colors duration-300 shadow-xs">
                       <Target className="w-6 h-6" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#D97746] bg-[#FAF8F5] px-3 py-1 rounded-full border border-[rgba(217,119,70,0.2)]">
                       Community Vision
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
+                  <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 min-h-[3.5rem] flex items-start group-hover:text-[#2D4F4F] transition-colors leading-snug">
                     Sustainable Care Networks
                   </h3>
 
-                  <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+                  <p className="text-sm sm:text-base text-[#4A5D5D] leading-relaxed max-w-2xl">
                     By partnering directly with families, schools, and medical providers, we turn these aims into tangible daily impact for communities in Kolkata.
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="flex items-center gap-2 text-xs font-semibold text-[#D4A373]">
+                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span className="flex items-center gap-2 text-xs font-semibold text-[#2D4F4F]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
                     <span>Collaborative Partnerships</span>
                   </span>
-                  <Link href="/contact" className="inline-flex items-center gap-2 text-xs font-bold text-[#D4A373] hover:text-white transition-colors">
+                  <Link href="/contact" className="inline-flex items-center gap-2 text-xs font-bold text-[#D97746] hover:text-[#2D4F4F] transition-colors">
                     <span>Connect with our care team</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
