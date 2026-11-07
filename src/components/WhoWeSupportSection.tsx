@@ -47,13 +47,18 @@ export default function WhoWeSupportSection() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14 items-stretch" staggerDelay={0.06}>
           {WHO_WE_SERVE_INFO.groups.map((group, idx) => (
             <StaggerItem key={group.id} className="h-full flex flex-col">
-              <div className="h-full bg-white rounded-2xl border border-[rgba(45,79,79,0.12)] p-6 shadow-xs hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
+              <div className="h-full bg-white rounded-2xl border border-[rgba(45,79,79,0.12)] p-6 sm:p-7 shadow-xs hover:shadow-md hover:border-[#D97746]/40 transition-all duration-300 flex flex-col justify-between group">
                 <div>
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#2D4F4F] group-hover:text-[#D4A373] transition-colors duration-300 mb-4 shadow-xs">
-                    <OrgIcon name={group.iconName} className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#2D4F4F] group-hover:text-[#D4A373] transition-colors duration-300 shadow-xs">
+                      <OrgIcon name={group.iconName} className="w-6 h-6" />
+                    </div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#D97746] bg-[#FAF8F5] px-3 py-1 rounded-full border border-[rgba(217,119,70,0.2)]">
+                      {groupLabels[group.id] || 'Focus Area'}
+                    </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-lg text-[#1A3333] mb-2.5 min-h-[2.75rem] flex items-center group-hover:text-[#2D4F4F] transition-colors leading-snug">
+                  <h3 className="font-heading font-bold text-xl text-[#1A3333] mb-3 min-h-[3.5rem] flex items-start group-hover:text-[#2D4F4F] transition-colors leading-snug">
                     {group.title}
                   </h3>
 
@@ -62,9 +67,10 @@ export default function WhoWeSupportSection() {
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-[#2D4F4F]/80">
-                  <span className="font-semibold text-[#D97746]">
-                    {groupLabels[group.id] || 'Inclusive Care'}
+                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-semibold text-[#2D4F4F]">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#D97746]" />
+                    <span>Community Support</span>
                   </span>
                   <span className="text-gray-400 font-mono text-[11px]">0{idx + 1}</span>
                 </div>

@@ -127,48 +127,48 @@ export default function ServicesPage() {
           </ScrollReveal>
 
           {/* 4 Feature Programmes Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
             {SPECIAL_PROGRAMMES.map((prog, idx) => (
               <ScrollReveal key={prog.id} variant="fade-up" delay={idx * 0.1} className="h-full flex flex-col">
-                <div className="h-full bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-[#D97746]/50 rounded-3xl p-8 sm:p-10 transition-all duration-300 flex flex-col justify-between">
+                <div className="h-full bg-white/[0.06] hover:bg-white/[0.1] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                   <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-[#D97746]/20 border border-[#D97746]/30 flex items-center justify-center text-[#D4A373]">
-                        <OrgIcon name={prog.iconName} className="w-7 h-7" />
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-12 h-12 rounded-xl bg-[#D97746]/20 border border-[#D97746]/30 flex items-center justify-center text-[#D4A373]">
+                        <OrgIcon name={prog.iconName} className="w-6 h-6" />
                       </div>
-                      <span className="text-xs font-bold tracking-widest uppercase text-[#D4A373] bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
                         {prog.category}
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-2xl text-white mb-4 min-h-[2rem] flex items-center leading-snug">
+                    <h3 className="font-heading font-bold text-xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
                       {prog.title}
                     </h3>
 
-                    <p className="text-[#F9F8F6]/85 text-base leading-relaxed mb-6">
+                    <p className="text-white/80 text-sm leading-relaxed mb-4">
                       {prog.description}
                     </p>
 
-                    <div className="space-y-2.5 pt-4 border-t border-white/10">
-                      <span className="text-xs uppercase tracking-wider text-[#D4A373] font-semibold block mb-2">
+                    <div className="space-y-2 pt-4 border-t border-white/10">
+                      <span className="text-xs uppercase tracking-wider text-[#D4A373] font-semibold block mb-1.5">
                         Key Dimensions &amp; Methodologies:
                       </span>
                       {prog.highlights.map((item, hIdx) => (
-                        <div key={hIdx} className="flex items-start gap-2.5 text-sm text-white/75">
-                          <CheckCircle2 className="w-4 h-4 text-[#D97746] flex-shrink-0 mt-0.5" />
+                        <div key={hIdx} className="flex items-start gap-2 text-xs text-white/75">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#D97746] flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
                     <span className="text-xs text-white/60">Community Centred</span>
                     <a
                       href={BUSINESS_INFO.whatsappCustomUrl(`Hello SWC, I would like to enquire about your ${prog.title} programme.`)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#D97746] hover:bg-[#C56636] text-white px-5 py-2.5 rounded-full text-xs font-bold transition-colors"
+                      className="inline-flex items-center gap-2 bg-[#D97746] hover:bg-[#C56636] text-white px-4 py-2 rounded-full text-xs font-bold transition-colors"
                     >
                       <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
                       <span>Participate / Enquire</span>

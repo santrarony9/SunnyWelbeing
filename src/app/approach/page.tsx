@@ -202,12 +202,12 @@ export default function ApproachPage() {
                       <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300 shadow-xs">
                         <OrgIcon name={val.iconName} className="w-6 h-6" />
                       </div>
-                      <span className="text-[11px] font-bold text-white/50 tracking-wider">
-                        0{idx + 1}
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                        Value 0{idx + 1}
                       </span>
                     </div>
 
-                    <h3 className="font-heading font-bold text-xl text-white mb-2.5 min-h-[3rem] flex items-center leading-snug">
+                    <h3 className="font-heading font-bold text-xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
                       {val.name}
                     </h3>
 
@@ -216,7 +216,7 @@ export default function ApproachPage() {
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#D4A373]">
+                  <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#D4A373]">
                     <span className="flex items-center gap-2 font-semibold">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#D97746]" />
                       <span>Ethical Standard</span>

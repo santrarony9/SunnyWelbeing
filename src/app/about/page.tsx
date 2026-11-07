@@ -165,12 +165,19 @@ export default function AboutPage() {
                 <StaggerItem key={idx} className="h-full flex flex-col">
                   <div className="h-full bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 hover:border-[#D97746]/50 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                     <div>
-                      <div className="flex items-center gap-2.5 mb-3 min-h-[2.5rem]">
-                        <CheckCircle2 className="w-5 h-5 text-[#D97746] flex-shrink-0" />
-                        <h3 className="font-heading font-bold text-lg text-white leading-snug">
-                          {phrase.term}
-                        </h3>
+                      <div className="flex items-center justify-between mb-5">
+                        <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300 shadow-xs">
+                          <CheckCircle2 className="w-6 h-6 flex-shrink-0" />
+                        </div>
+                        <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                          Pillar 0{idx + 1}
+                        </span>
                       </div>
+
+                      <h3 className="font-heading font-bold text-xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
+                        {phrase.term}
+                      </h3>
+
                       <p className="text-sm text-white/75 leading-relaxed">
                         {phrase.desc}
                       </p>
@@ -191,12 +198,19 @@ export default function AboutPage() {
               <StaggerItem className="h-full flex flex-col">
                 <div className="h-full bg-gradient-to-br from-[#D97746]/20 to-transparent border border-[#D97746]/40 rounded-2xl p-6 sm:p-7 transition-all duration-300 flex flex-col justify-between group">
                   <div>
-                    <div className="flex items-center gap-2.5 mb-3 min-h-[2.5rem]">
-                      <Sparkles className="w-5 h-5 text-[#D4A373] flex-shrink-0" />
-                      <h3 className="font-heading font-bold text-lg text-white leading-snug">
-                        Compassionate Guidance
-                      </h3>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-12 h-12 rounded-xl bg-[#D97746]/20 border border-[#D97746]/30 flex items-center justify-center text-[#D4A373] group-hover:bg-[#D97746] group-hover:text-white transition-colors duration-300 shadow-xs">
+                        <Sparkles className="w-6 h-6 flex-shrink-0" />
+                      </div>
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
+                        Commitment
+                      </span>
                     </div>
+
+                    <h3 className="font-heading font-bold text-xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
+                      Compassionate Guidance
+                    </h3>
+
                     <p className="text-sm text-white/80 leading-relaxed">
                       Ensuring every voice is heard with unconditional positive regard, cultural sensitivity, and ethical privacy.
                     </p>
@@ -246,7 +260,7 @@ export default function AboutPage() {
                       <div className="w-12 h-12 rounded-xl bg-[#FAF8F5] border border-[rgba(45,79,79,0.1)] flex items-center justify-center text-[#2D4F4F] group-hover:bg-[#162727] group-hover:text-[#D4A373] transition-colors duration-300 shadow-xs">
                         <OrgIcon name={aim.iconName} className="w-6 h-6" />
                       </div>
-                      <span className="font-heading text-xs font-bold text-[#D97746] tracking-wider uppercase">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#D97746] bg-[#FAF8F5] px-3 py-1 rounded-full border border-[rgba(217,119,70,0.2)]">
                         Aim 0{idx + 1}
                       </span>
                     </div>
@@ -279,12 +293,12 @@ export default function AboutPage() {
                     <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-[#D4A373] shadow-xs">
                       <Target className="w-6 h-6" />
                     </div>
-                    <span className="font-heading text-xs font-bold text-[#D4A373] tracking-wider uppercase bg-white/10 px-3 py-1 rounded-full border border-white/10">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-[#D4A373] bg-white/10 px-3 py-1 rounded-full border border-white/15">
                       Community Vision
                     </span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
+                  <h3 className="font-heading font-bold text-xl text-white mb-3 min-h-[3.5rem] flex items-start leading-snug">
                     Sustainable Care Networks
                   </h3>
 
@@ -334,7 +348,7 @@ export default function AboutPage() {
           <div className="space-y-8">
             {OUR_OBJECTIVES.map((obj, idx) => (
               <ScrollReveal key={obj.id} variant="fade-up" delay={idx * 0.08}>
-                <div className="bg-[#FAF8F5] rounded-3xl border border-[rgba(45,79,79,0.12)] p-8 sm:p-10 shadow-sm hover:border-[#D97746]/40 transition-all duration-300">
+                <div className="bg-[#FAF8F5] rounded-2xl border border-[rgba(45,79,79,0.12)] p-7 sm:p-9 shadow-sm hover:border-[#D97746]/40 transition-all duration-300">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
                     
                     {/* Header Col */}
